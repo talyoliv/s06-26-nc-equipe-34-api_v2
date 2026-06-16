@@ -3,6 +3,7 @@ import { useState } from "react";
 import Welcome from "./pages/Welcome/Welcome";
 import KnowYou from "./pages/KnowYou/KnowYou";
 import AboutYou from "./pages/AboutYou/AboutYou";
+import Needs from "./pages/Needs/Needs";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState("welcome");
@@ -41,10 +42,26 @@ function App() {
           
        {/* ABOUT YOU — etapa 2 do cadastro */}
        {currentScreen === "aboutyou" && (
-        <AboutYou
-          onBack={navigateBack}
-          onNavigate={() => navigateTo("needs")}
-        />
+         <AboutYou
+           onBack={navigateBack}
+           onNavigate={() => navigateTo("needs")}
+         />
+        )}
+          
+        {/* NEEDS — etapa 3: o que você precisa hoje */}
+        {currentScreen === "needs" && (
+          <Needs
+            onBack={navigateBack}
+            onNavigate={() => {
+              const veioDoLogin = history.includes("login");
+
+              if (veioDoLogin) {
+                navigateTo("home");
+              } else {
+                navigateTo("analysis");
+              }
+            }}
+          />
         )}
          
     </>

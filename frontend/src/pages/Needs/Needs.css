@@ -1,0 +1,85 @@
+/* ==========================================================================
+   ESTILIZAÇÃO TOTAL (Cores, Bordas e Layout)
+   ========================================================================== */
+.light-theme {
+  --bg-card-opcao: #F4F7F5;
+  --bg-info-box: #EBF4F0;
+  --texto-principal: #3E5245;
+  --borda-card: #e0e8e4;
+}
+
+.dark-theme {
+  --bg-card-opcao: #1a2a26;
+  --bg-info-box: #162420;
+  --texto-principal: #FFFFFF;
+  --borda-card: #2a3d38;
+}
+
+/* Card - Estilo Suave */
+.option-card {
+  background-color: var(--bg-card-opcao);
+  border: 1px solid var(--borda-card);
+  border-radius: 16px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  min-height: 120px;
+}
+
+/* Estado Ativo - Destaque claro */
+.option-card.active {
+  border-color: var(--verde-agua);
+  background-color: var(--bg-info-box);
+}
+
+.option-emoji {
+  font-size: 32px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.option-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texto-principal);
+  line-height: 1.2;
+}
+
+/* Info Box */
+.info-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: var(--bg-info-box);
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid var(--borda-card);
+  color: var(--texto-principal);
+}
+
+/* Ajustes gerais de layout */
+.options-grid { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 16px; 
+  margin-bottom: 32px; 
+}
+
+.title { font-size: 28px; font-weight: 700; color: var(--texto-principal); text-align: center; margin-bottom: 12px; }
+.subtitle { font-size: 16px; color: var(--texto-secundario); text-align: center; margin-bottom: 40px; }
+
+.btn-submit { 
+  width: 100%;
+  height: 54px; 
+  background-color: var(--verde-agua); 
+  color: #FFFFFF; 
+  border: none; 
+  border-radius: 12px; 
+  font-weight: 600; 
+  cursor: pointer; 
+}
