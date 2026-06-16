@@ -1,0 +1,150 @@
+.about-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: var(--bg-principal);
+}
+
+.about-container {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Header & Progress Bar */
+.about-header {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+}
+
+/* Content */
+.about-content h2 {
+  color: var(--text-primary);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.about-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+/* Question Labels */
+.selection-group {
+  margin-bottom: 20px;
+}
+
+.selection-group label {
+  display: block;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+/* Botões de Opção (Nível e Busca) */
+.options-row, .options-wrap {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.opt-btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.opt-btn.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Dark Mode adjustment for Active */
+.dark-theme .opt-btn.active {
+  background-color: var(--primary);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+/* Grid de Áreas de Interesse */
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.grid-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 4px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  gap: 6px;
+}
+
+.grid-btn .icon {
+  font-size: 1.2rem;
+}
+
+.grid-btn .label {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.grid-btn.active {
+  border: 2px solid var(--primary);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.dark-theme .grid-btn.active {
+    background-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Botão Continuar */
+.btn-finish {
+  margin-top: 10px;
+  width: 100%;
+}
