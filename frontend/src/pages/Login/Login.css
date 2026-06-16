@@ -1,0 +1,132 @@
+/* Layout Geral */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: var(--bg-principal);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.login-header {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+/* Conteúdo */
+.login-content {
+  margin-bottom: 32px;
+}
+
+.login-content h2 {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.login-content p {
+  color: var(--text-secondary);
+}
+
+/* Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px; 
+}
+
+.input-field {
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid var(--border-color, #e5e7eb);
+  background: var(--bg-input, white);
+  color: var(--text-primary);
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.forgot-password a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+
+/* Divisor Novo */
+.divider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 24px 0; /* Espaçamento entre form e botão Google */
+  width: 100%;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color, #e5e7eb);
+}
+
+.divider-text {
+  padding: 0 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Botões */
+.btn {
+  width: 100%;
+  border-radius: 18px;
+  min-height: 56px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-google {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 18px;
+  border: 2px solid var(--border-color, #e5e7eb);
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-google img {
+  width: 20px;
+  height: 20px;
+}
