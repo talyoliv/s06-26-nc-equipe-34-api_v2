@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import Welcome from "./pages/Welcome/Welcome";
+import KnowYou from "./pages/KnowYou/KnowYou";
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState("welcome");
@@ -27,7 +28,16 @@ function App() {
       {/* WELCOME */}
       {currentScreen === "welcome" && (
         <Welcome onNavigate={navigateTo} />
-      )}      
+      )}   
+          
+      {/* KNOW YOU — etapa 1 do cadastro */}
+      {currentScreen === "knowyou" && (
+        <KnowYou
+          onBack={navigateBack}
+          onNavigate={() => navigateTo("aboutyou")}
+        />
+      )}
+         
     </>
   );
 }
