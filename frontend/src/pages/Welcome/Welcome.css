@@ -1,0 +1,107 @@
+/* ==========================================================================
+   ESTILIZAÇÃO TOTAL DA PÁGINA WELCOME
+   ========================================================================== */
+.welcome-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  background-color: var(--bg-principal);
+}
+
+.welcome-container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header em Grid para centralizar o Logo perfeitamente */
+.welcome-header {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px; /* Coluna esquerda, centro, direita */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.header-right { 
+  display: flex; 
+  justify-content: flex-end; 
+}
+
+/* O Logo agora centralizado no meio do Grid */
+.logo-group {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; /* Centraliza ícone e texto horizontalmente */
+  justify-content: center;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+}
+
+.logo-group h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Conteúdo */
+.hero-content h2 {
+  color: var(--text-primary);
+  font-size: 2rem;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.illustration img {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 40px;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+}
+
+/* Botões */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.btn {
+  border: none;
+  border-radius: 18px;
+  min-height: 56px;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
